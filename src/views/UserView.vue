@@ -31,18 +31,24 @@
             :to="'/post/'+post.id"
             class="text-decoration-none"
            ><v-btn text small>
-            View
+            <v-icon aria-hidden="false">
+              mdi-eye-outline
+            </v-icon>
            </v-btn>
            </router-link>
            <router-link
             :to="'/user/post/'+post.id"
             class="text-decoration-none"
            ><v-btn text small>
-            Edit
+            <v-icon aria-hidden="false">
+              mdi-pencil
+            </v-icon>
            </v-btn>
            </router-link>
-           <v-btn text small @click="deletePost(post.id)">
-            Delete
+           <v-btn text small >
+            <v-icon aria-hidden="false" @click="deletePost(post.id)">
+              mdi-delete
+            </v-icon>
            </v-btn>
       </td>
         </tr>

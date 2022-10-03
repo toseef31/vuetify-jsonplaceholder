@@ -5,7 +5,7 @@
     <router-link
         to="/user/post/0"
        >
-     <v-btn
+     <v-btn v-if="user"
       color="success"
       class="mb-3"
         >
@@ -57,6 +57,11 @@
       posts: {
        type: [Array, Object],
       },
+    },
+    data() {
+      return {
+        user: localStorage.getItem("name"),
+      };
     },
   }
 </script>
